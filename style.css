@@ -30,7 +30,7 @@
     padding: 4px 20px; 
     box-shadow: 2px 2px 6px #E1E1E1;
 }
-#menu {
+#menu1 {
     background-color: #ECECF3;
     border-radius: 4px;
 }
@@ -49,4 +49,22 @@
     background-color: #3a34eb;
     border-radius: 4px;
     color: white;
+}
+
+.form {
+    position: fixed;
+    left: 10px;
+    top: 30vh ;
+    border: 1px solid #cfcbcb;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px #E1E1E1;
+}
+
+.hide {
+    display: none;
 }
