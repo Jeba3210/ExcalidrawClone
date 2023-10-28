@@ -13,21 +13,22 @@
 <body>
     <div id="root">
         <div id="header">
-            <button class="material-icons btn" id="menu">menu</button>
-            <div class="icons">
-                <button class="material-icons btn">lock</button>
+            <button class="material-icons btn menu" id="menu1" onclick="toggleMenu()">menu</button>
+            <div class="icons" id="actionbuttons">
+                <button class="material-symbols-outlined btn">lock</button>
+                <button class="material-symbols-outlined btn">back_hand</button>
                 <button class="material-icons btn">north_west</button>
-                <button class="material-icons btn">crop_square</button>
-                <button class="material-symbols-outlined btn">circle</button>
+                <button class="material-icons btn" id="rectangle" onclick="onActionClick(this)">crop_square</button>
+                <button class="material-symbols-outlined btn" id="circle" onclick="onActionClick(this)">circle</button>
                 <button class="material-icons btn">arrow_forward</button>
-                <button class="material-icons btn">horizontal_rule</button>
-                <button class="material-icons btn" id="pencil">edit</button>
+                <button class="material-icons btn" id="line" onclick="onActionClick(this)">horizontal_rule</button>
+                <button class="material-symbols-outlined btn" id="freehand"
+                onclick="onActionClick(this)">edit</button>
                 <button class="material-icons btn">text_format</button>
                 <button class="material-symbols-outlined btn">gallery_thumbnail</button>
-                <button class="material-symbols-outlined btn">ink_eraser</button>
+                <button class="material-symbols-outlined btn" id="eraser" onclick="onActionClick(this)">ink_eraser</button>
                 <button class="material-symbols-outlined btn">category</button>
                 <button class="material-icons btn"></button>
-                <input type="color" id="color-picker">
             </div>
             <div class="login">
                 <button class="material-symbols-outlined btn">group</button>
@@ -37,6 +38,26 @@
         <canvas id="canvas"></canvas>
         <div id="footer"></div>
     </div>
+
+
+    <div class="form hide">
+        <label for="strokewidth"><p>Stroke Width</p></label>
+        <input
+          type="range"
+          id="strokewidth"
+          name="strokewidth"
+          min="3"
+          max="10"
+          oninput="onInput(this)"
+        />
+        <label for="strokestyle"><p>Stroke Color</p></label>
+        <input
+          type="color"
+          name="strokestyle"
+          id="strokestyle"
+          oninput="onInput(this)"
+        />
+      </div>
 
   <script src="script.js"></script>
     
